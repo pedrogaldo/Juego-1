@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CambioEscena : MonoBehaviour {
+public class Controls : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
