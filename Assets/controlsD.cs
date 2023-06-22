@@ -1,20 +1,23 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Controls : MonoBehaviour {
+public class Controls : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
 
 
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
 
-//tambor izquierdo
+        //tambor izquierdo
 
         if (Input.GetKey(KeyCode.Q))
         {
@@ -95,7 +98,7 @@ public class Controls : MonoBehaviour {
 
 
 
-//Tambor derecho
+        //Tambor derecho
 
         if (Input.GetKey(KeyCode.Y))
         {
@@ -162,15 +165,15 @@ public class Controls : MonoBehaviour {
             GetComponent<Renderer>().enabled = false;
         }
 
-       // if (Input.GetKey(KeyCode.Hypher))
-       // {
-      //      GetComponent<Renderer>().enabled = false;
-      //  }
+        // if (Input.GetKey(KeyCode.Hypher))
+        // {
+        //      GetComponent<Renderer>().enabled = false;
+        //  }
 
-      //  if (Input.GetKey(KeyCode.))
-     //   {
-     //       GetComponent<Renderer>().enabled = false;
-     //   }
+        //  if (Input.GetKey(KeyCode.))
+        //   {
+        //       GetComponent<Renderer>().enabled = false;
+        //   }
 
 
 
