@@ -21,7 +21,7 @@ public class encenderLuz : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Q))
         {
-            GetComponent<Light>().enabled = true;
+            GetComponent<Color>();
         }
 
         else if (Input.GetKey(KeyCode.W))
