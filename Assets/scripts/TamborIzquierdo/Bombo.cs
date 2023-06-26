@@ -17,7 +17,9 @@ public class Bombo : MonoBehaviour
         if (Input.GetKey(KeyCode.Q))
         {
             GetComponent<AudioSource>().enabled = true;
+
         }
+
 
         else if (Input.GetKey(KeyCode.W))
         {

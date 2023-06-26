@@ -9,6 +9,8 @@ public class Azar : MonoBehaviour
     public GameObject[] tambores;
     private int selectDrum;
     public float stayLit;
+    SpriteRenderer tamborPrendido;
+
 
 
     // Start is called before the first frame update
@@ -26,9 +28,9 @@ public class Azar : MonoBehaviour
 
     public void iniciarJuego()
     {
-        selectDrum = Random.Range(0, tambores.Length);
 
-        tambores[selectDrum].color = new Color(tambores[selectDrum].color.r, tambores[selectDrum].color.g, tambores[selectDrum].color.b, 1f);
-
+       // selectDrum = Random.Range(0, tambores.Length);
+      //  tamborPrendido = tambores[selectDrum].GetComponent<SpriteRenderer>();
+        //tamborPrendido.color = tambores[selectDrum].color.r, tambores[selectDrum].color.g, tambores[selectDrum].color.b, 1f;
     }
 }
