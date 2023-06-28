@@ -12,11 +12,13 @@ public class SceneChange : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
     public void cambio ()
     {
         SceneManager.LoadScene("Juego");
-    }
+		Time.timeScale = 1f;
+
+	}
 }

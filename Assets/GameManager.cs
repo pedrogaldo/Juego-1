@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Azar : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
 
 
@@ -14,24 +13,43 @@ public class Azar : MonoBehaviour
     private float stayLitCounter;
 
 
+   SpriteRenderer tamborPresionado;
 
-    // Start is called before the first frame update
+   GameObject bombo = tambores.transform.GetChild(0).bombo;
+
+
     void Start()
-    {
-        
+    {   //Prende luces
+        if (stayLitCounter > 0)
+        {
+            stayLitCounter -= Time.deltaTime;
+        }else
+        {
+            tambores[selectDrum].color = new Color(tambores[selectDrum].color.r, tambores[selectDrum].color.g, tambores[selectDrum].color.b, 0.5f);
+        }
+
+        //controla bombo
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            bombo<AudioSource>().enabled = true;
+            tamborPresionado = bombo<SpriteRenderer>();
+            tamborPresionado.color = new Color(tamborPresionado.color.r, tamborPresionado.color.g, tamborPresionado.color.b, 1f);
+        }
+
+
+
+
+        //controla redo
+
+        //controla platillo
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (stayLitCounter > 0)
-        {
-            stayLitCounter -= Time.deltaTime;
-        }
-        else
-        {
-            tambores[selectDrum].color = new Color(tambores[selectDrum].color.r, tambores[selectDrum].color.g, tambores[selectDrum].color.b, 0.5f);
-        }
+        
     }
 
 
@@ -43,6 +61,5 @@ public class Azar : MonoBehaviour
         stayLitCounter = stayLit;
 
     }
-
 
 }

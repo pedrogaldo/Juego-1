@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Bombo : MonoBehaviour
 {
-    SpriteRenderer tamborPrendido;
-    Color newColor = new Color();
-    public Color m_newColor;
+    SpriteRenderer tamborPresionado;
+//    public Color m_newColor;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,117 +15,123 @@ public class Bombo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Q))
-        {
-            GetComponent<AudioSource>().enabled = true;
-            tamborPrendido = GetComponent<SpriteRenderer>();
-            tamborPrendido.color = Color.green;
-        }
 
 
-        else if (Input.GetKey(KeyCode.W))
-        {
-            GetComponent<AudioSource>().enabled = true;
-            tamborPrendido = GetComponent<SpriteRenderer>();
-            tamborPrendido.color = Color.green;
-        }
+            if (Input.GetKey(KeyCode.Q))
+            {
+                GetComponent<AudioSource>().enabled = true;
+                tamborPresionado = GetComponent<SpriteRenderer>();
+                tamborPresionado.color = new Color(tamborPresionado.color.r, tamborPresionado.color.g, tamborPresionado.color.b, 1f);
+            }
 
-        else if (Input.GetKey(KeyCode.E))
-        {
-            GetComponent<AudioSource>().enabled = true;
-            tamborPrendido = GetComponent<SpriteRenderer>();
-            tamborPrendido.color = Color.green;
-        }
 
-        else if (Input.GetKey(KeyCode.R))
-        {
-            GetComponent<AudioSource>().enabled = true;
-            tamborPrendido = GetComponent<SpriteRenderer>();
-            tamborPrendido.color = Color.green;
-        }
+            else if (Input.GetKey(KeyCode.W))
+            {
+                GetComponent<AudioSource>().enabled = true;
+                tamborPresionado = GetComponent<SpriteRenderer>();
+                tamborPresionado.color = new Color(tamborPresionado.color.r, tamborPresionado.color.g, tamborPresionado.color.b, 1f);
+            }
 
-        else if (Input.GetKey(KeyCode.T))
-        {
-            GetComponent<AudioSource>().enabled = true;
-            tamborPrendido = GetComponent<SpriteRenderer>();
-            tamborPrendido.color = Color.green;
-        }
+            else if (Input.GetKey(KeyCode.E))
+            {
+                GetComponent<AudioSource>().enabled = true;
+                tamborPresionado = GetComponent<SpriteRenderer>();
+                tamborPresionado.color = new Color(tamborPresionado.color.r, tamborPresionado.color.g, tamborPresionado.color.b, 1f);
+            }
 
-        else if (Input.GetKey(KeyCode.A))
-        {
-            GetComponent<AudioSource>().enabled = true;
-            tamborPrendido = GetComponent<SpriteRenderer>();
-            tamborPrendido.color = Color.green;
-        }
+            else if (Input.GetKey(KeyCode.R))
+            {
+                GetComponent<AudioSource>().enabled = true;
+                tamborPresionado = GetComponent<SpriteRenderer>();
+                tamborPresionado.color = new Color(tamborPresionado.color.r, tamborPresionado.color.g, tamborPresionado.color.b, 1f);
+            }
 
-        else if (Input.GetKey(KeyCode.S))
-        {
-            GetComponent<AudioSource>().enabled = true;
-            tamborPrendido = GetComponent<SpriteRenderer>();
-            tamborPrendido.color = Color.green;
-        }
+            else if (Input.GetKey(KeyCode.T))
+            {
+                GetComponent<AudioSource>().enabled = true;
+                tamborPresionado = GetComponent<SpriteRenderer>();
+                tamborPresionado.color = new Color(tamborPresionado.color.r, tamborPresionado.color.g, tamborPresionado.color.b, 1f);
+            }
 
-        else if (Input.GetKey(KeyCode.D))
-        {
-            GetComponent<AudioSource>().enabled = true;
-            tamborPrendido = GetComponent<SpriteRenderer>();
-            tamborPrendido.color = Color.green;
-        }
+            else if (Input.GetKey(KeyCode.A))
+            {
+                GetComponent<AudioSource>().enabled = true;
+                tamborPresionado = GetComponent<SpriteRenderer>();
+                tamborPresionado.color = new Color(tamborPresionado.color.r, tamborPresionado.color.g, tamborPresionado.color.b, 1f);
 
-        else if (Input.GetKey(KeyCode.F))
-        {
-            GetComponent<AudioSource>().enabled = true;
-            tamborPrendido = GetComponent<SpriteRenderer>();
-            tamborPrendido.color = Color.green;
-        }
+            }
 
-        else if (Input.GetKey(KeyCode.G))
-        {
-            GetComponent<AudioSource>().enabled = true;
-            tamborPrendido = GetComponent<SpriteRenderer>();
-            tamborPrendido.color = Color.green;
-        }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                GetComponent<AudioSource>().enabled = true;
+                tamborPresionado = GetComponent<SpriteRenderer>();
+                tamborPresionado.color = new Color(tamborPresionado.color.r, tamborPresionado.color.g, tamborPresionado.color.b, 1f);
 
-        else if (Input.GetKey(KeyCode.Z))
-        {
-            GetComponent<AudioSource>().enabled = true;
-            tamborPrendido = GetComponent<SpriteRenderer>();
-            tamborPrendido.color = Color.green;
-        }
+            }
 
-        else if (Input.GetKey(KeyCode.X))
-        {
-            GetComponent<AudioSource>().enabled = true;
-            tamborPrendido = GetComponent<SpriteRenderer>();
-            tamborPrendido.color = Color.green;
-        }
+            else if (Input.GetKey(KeyCode.D))
 
-        else if (Input.GetKey(KeyCode.C))
-        {
-            GetComponent<AudioSource>().enabled = true;
-            tamborPrendido = GetComponent<SpriteRenderer>();
-            tamborPrendido.color = Color.green;
-        }
+            {
+                GetComponent<AudioSource>().enabled = true;
+                tamborPresionado = GetComponent<SpriteRenderer>();
+                tamborPresionado.color = new Color(tamborPresionado.color.r, tamborPresionado.color.g, tamborPresionado.color.b, 1f);
+            }
 
-        else if (Input.GetKey(KeyCode.V))
-        {
-            GetComponent<AudioSource>().enabled = true;
-            tamborPrendido = GetComponent<SpriteRenderer>();
-            tamborPrendido.color = Color.green;
-        }
+            else if (Input.GetKey(KeyCode.F))
+            {
+                GetComponent<AudioSource>().enabled = true;
+                tamborPresionado = GetComponent<SpriteRenderer>();
+                tamborPresionado.color = new Color(tamborPresionado.color.r, tamborPresionado.color.g, tamborPresionado.color.b, 1f);
+            }
 
-        else if (Input.GetKey(KeyCode.B))
-        {
-            GetComponent<AudioSource>().enabled = true;
-            tamborPrendido = GetComponent<SpriteRenderer>();
-            tamborPrendido.color = Color.green;
-        }
+            else if (Input.GetKey(KeyCode.G))
+            {
+                GetComponent<AudioSource>().enabled = true;
+                tamborPresionado = GetComponent<SpriteRenderer>();
+                tamborPresionado.color = new Color(tamborPresionado.color.r, tamborPresionado.color.g, tamborPresionado.color.b, 1f);
+            }
 
-        else
-        {
-            GetComponent<AudioSource>().enabled = false;
-            tamborPrendido = GetComponent<SpriteRenderer>();
-            tamborPrendido.color = Color.grey;
-        }
+            else if (Input.GetKey(KeyCode.Z))
+            {
+                GetComponent<AudioSource>().enabled = true;
+                tamborPresionado = GetComponent<SpriteRenderer>();
+                tamborPresionado.color = new Color(tamborPresionado.color.r, tamborPresionado.color.g, tamborPresionado.color.b, 1f);
+            }
+
+            else if (Input.GetKey(KeyCode.X))
+            {
+                GetComponent<AudioSource>().enabled = true;
+                tamborPresionado = GetComponent<SpriteRenderer>();
+                tamborPresionado.color = new Color(tamborPresionado.color.r, tamborPresionado.color.g, tamborPresionado.color.b, 1f);
+            }
+
+            else if (Input.GetKey(KeyCode.C))
+            {
+                GetComponent<AudioSource>().enabled = true;
+                tamborPresionado = GetComponent<SpriteRenderer>();
+                tamborPresionado.color = new Color(tamborPresionado.color.r, tamborPresionado.color.g, tamborPresionado.color.b, 1f);
+            }
+
+            else if (Input.GetKey(KeyCode.V))
+            {
+                GetComponent<AudioSource>().enabled = true;
+                tamborPresionado = GetComponent<SpriteRenderer>();
+                tamborPresionado.color = new Color(tamborPresionado.color.r, tamborPresionado.color.g, tamborPresionado.color.b, 1f);
+            }
+
+            else if (Input.GetKey(KeyCode.B))
+            {
+                GetComponent<AudioSource>().enabled = true;
+                tamborPresionado = GetComponent<SpriteRenderer>();
+                tamborPresionado.color = new Color(tamborPresionado.color.r, tamborPresionado.color.g, tamborPresionado.color.b, 1f);
+            }
+
+            else
+            {
+                GetComponent<AudioSource>().enabled = false;
+                tamborPresionado = GetComponent<SpriteRenderer>();
+                tamborPresionado.color = new Color(tamborPresionado.color.r, tamborPresionado.color.g, tamborPresionado.color.b, 0.5f);
+            }
+         }
+
     }
-}
