@@ -4,7 +4,16 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public SpriteRenderer bombo;
+
+    public SpriteRenderer[] tambores; //este es un array de sprites para prenderlos cuando se haga una seleccion random
+    private int selectDrum;
+    public float stayLit;
+    private float stayLitCounter;
+
+
+
+
+    public SpriteRenderer bombo;//estos sprites son para prender el tambor que corresponda cuando se presione una tecla
     public SpriteRenderer snare;
     public SpriteRenderer platillo;
 
@@ -165,6 +174,15 @@ public class GameManager : MonoBehaviour
             platillo.color = new Color(platillo.color.r, platillo.color.g, platillo.color.b, 0.5f);
         }
 
+
+        if (stayLitCounter > 0)
+        {
+            stayLitCounter -= Time.deltaTime;
+        }else
+        {
+            tambores[selectDrum].color = new Color(tambores[selectDrum].r, tambores[selectDrum].g, tambores[selectDrum].b, 0.5f);
+        }
+
     }
 
 
@@ -184,6 +202,13 @@ public class GameManager : MonoBehaviour
     {
         platillo.GetComponent<AudioSource>().enabled = true;
         platillo.color = new Color(platillo.color.r, platillo.color.g, platillo.color.b, 1f);
+    }
+
+    public void startGame()
+    {
+        selectDrum = Random.Range(0, tambores.Length);
+        tambores[selectDrum].color = new Color(tambores[selectDrum].r, tambores[selectDrum].g, tambores[selectDrum].b, 1f);
+        stayLitCounter = stayLit;
     }
 }
 
