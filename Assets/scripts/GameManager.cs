@@ -87,16 +87,13 @@ public class GameManager : MonoBehaviour
         else if (Input.GetKey(KeyCode.B))
         {
             prenderBombo();
-        }else
-        {
-            bombo.GetComponent<AudioSource>().enabled = false;
-            bombo.color = new Color(bombo.color.r, bombo.color.g, bombo.color.b, 0.5f);
         }
 
 
 
+
         //Controla Redo
-        if (Input.GetKey(KeyCode.Y))
+        else if (Input.GetKey(KeyCode.Y))
         {
             prenderSnare();
         }
@@ -156,32 +153,49 @@ public class GameManager : MonoBehaviour
         {
             prenderSnare();
         }
-        else
-        {
-            snare.GetComponent<AudioSource>().enabled = false;
-            snare.color = new Color(snare.color.r, snare.color.g, snare.color.b, 0.5f);
-        }
 
 
         //controla platillo
 
-        if (Input.GetKey(KeyCode.Space))
+        else if (Input.GetKey(KeyCode.Space))
         {
             prenderPlatillo();
-        }else
-        {
-            platillo.GetComponent<AudioSource>().enabled = false;
-            platillo.color = new Color(platillo.color.r, platillo.color.g, platillo.color.b, 0.5f);
         }
 
+
+
+        else
+        {
+            snare.GetComponent<AudioSource>().enabled = false;
+            snare.color = new Color(snare.color.r, snare.color.g, snare.color.b, 0.5f);
+
+            bombo.GetComponent<AudioSource>().enabled = false;
+            bombo.color = new Color(bombo.color.r, bombo.color.g, bombo.color.b, 0.5f);
+
+            platillo.GetComponent<AudioSource>().enabled = false;
+            platillo.color = new Color(platillo.color.r, platillo.color.g, platillo.color.b, 0.5f);
+        }        
+        
+
+
+
+
+
+    }
+
+
+    public void countdown(float stayLitCounter)
+    {
 
         if (stayLitCounter > 0)
         {
             stayLitCounter -= Time.deltaTime;
-        }else
-        {
-            tambores[selectDrum].color = new Color(tambores[selectDrum].r, tambores[selectDrum].g, tambores[selectDrum].b, 0.5f);
         }
+        else
+        {
+            tambores[selectDrum].color = new Color(tambores[selectDrum].color.r, tambores[selectDrum].color.g, tambores[selectDrum].color.b, 0.5f);
+        }
+
 
     }
 
@@ -207,7 +221,7 @@ public class GameManager : MonoBehaviour
     public void startGame()
     {
         selectDrum = Random.Range(0, tambores.Length);
-        tambores[selectDrum].color = new Color(tambores[selectDrum].r, tambores[selectDrum].g, tambores[selectDrum].b, 1f);
+        tambores[selectDrum].color = new Color(tambores[selectDrum].color.r, tambores[selectDrum].color.g, tambores[selectDrum].color.b, 1f);
         stayLitCounter = stayLit;
     }
 }
