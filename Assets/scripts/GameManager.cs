@@ -184,7 +184,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void countdown(float stayLitCounter)
+    public void countdown(float stayLit)
     {
 
         if (stayLitCounter > 0)
